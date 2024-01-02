@@ -1,4 +1,3 @@
-<?php include('db.php');?>
 
 
 <!DOCTYPE html>
@@ -16,7 +15,7 @@
     <div class="main-container">
         <div class="login-box">
             <h3>Real State Mangement</h3>
-            <form action="auth.php" method="post" class="login-form">
+            <form action="Controller/authcontroller.php" method="post" class="login-form">
                 <input type="text" name="user_name" placeholder="User Name">
                 <input type="password" name="password" placeholder="Password">
                 <input type="submit" value="Login">
