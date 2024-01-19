@@ -76,8 +76,8 @@
     margin-top: 48px;
 }
 .box{
-    width: 300px;
-    height: 200px;
+    width: 279px;
+    height: 142px;
     padding: 30px;
     margin: 1%;
     float: left;
@@ -87,11 +87,29 @@
     text-transform: uppercase;
 }
 .rent{
-    background: linear-gradient(orange, red);
+    background: linear-gradient(#3bff00, red);
 }
 .sell{
-    background:linear-gradient(blue,#c7140f)
+    background:linear-gradient(rgb(242, 255, 0),#c7140f)
 }
 .appnt{
-    background: linear-gradient(#011c21,orange)
+    background: linear-gradient(#011c21,rgb(255, 0, 0))
+}
+.booking-box {
+    width: 347px;
+    text-align: center;
+    border: 2px solid gray;
+    padding: 20px 20px;
+    background: white;
+    position: absolute;
+    top: -80px;
+    left: 40%;
+    transition: 0.3s;
+    visibility: hidden;
+    opacity: 0;
+}
+.show{
+    top: 0;
+    visibility: visible;
+    opacity: 1;
 }

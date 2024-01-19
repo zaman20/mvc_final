@@ -30,11 +30,10 @@
                     </div>
                     <div class="col-lg-6">
                         <select name="house" id="" class="form-select">
-                            <option value="House-1">House# 1</option>
-                            <option value="House-2">House# 2</option>
-                            <option value="House-3">House# 3</option>
-                            <option value="House-4">House# 4</option>
-                            <option value="House-5">House# 5</option>
+                        <?php include('../Model/houseModel.php');?>
+                        <?php while($row= mysqli_fetch_assoc($query)){ ?>
+                            <option value="House #<?php echo $row['id'];?>">House #<?php echo $row['id'];?></option>
+                        <?php }?>
                         </select>
                     </div>
                     <div class="col-lg-6">
