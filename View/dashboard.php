@@ -14,7 +14,6 @@
        <div class="row">
         <div class="col-lg-2 left-part">
             <div class="left-part-content">
-                <h2>Real State System</h2>
                 <?php include('menu.php');?>
                 
             </div>

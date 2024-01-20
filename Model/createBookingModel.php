@@ -6,8 +6,9 @@
         $buyer_phone = $_POST['phone'];
         $house = $_POST['hid'];
         $address = $_POST['address'];
+        $price = $_POST['price'];
 
-        $sql = "INSERT INTO `interest`(`name`, `phone`, `address`, `house`) VALUES ('$buyer_name','$buyer_phone','$address','$house')";
+        $sql = "INSERT INTO `interest`(`name`, `phone`, `address`, `house`,`price`) VALUES ('$buyer_name','$buyer_phone','$address','$house','$price')";
         
         }
     ?>

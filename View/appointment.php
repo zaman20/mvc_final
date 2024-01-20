@@ -14,7 +14,7 @@
        <div class="row">
         <div class="col-lg-2 left-part">
             <div class="left-part-content">
-                <h2>Real State System</h2>
+        
                 <?php include('menu.php');?>
             </div>
         </div>
@@ -45,6 +45,7 @@
                         <td><?php echo $row['apt_time'];?></td>
                         <td>
                             <a href="tel:<?php echo $row['buyer_phone'];?>" class="btn btn-warning">Call</a>
+                            <a href="#" data-id="<?php echo $row['id'];?>" class="btn btn-danger dlt-btn">Delete</a>
                         </td>
                     </tr>
                 
@@ -54,5 +55,13 @@
         </div>
        </div>
     </div>
+
+     <!-- ================================================================= -->
+     <form action="../model/dltAptModel.php" method="post" id="dltForm">
+        <input type="hidden" name="id" id="hid">
+    </form>
+<!-- ===================================================================== -->
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/myscripts.js"></script>
 </body>
 </html>

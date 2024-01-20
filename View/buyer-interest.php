@@ -43,6 +43,8 @@
                     <td><?php echo $row['date'];?></td>
                     <td>
                         <a href="tel:<?php echo $row['phone'];?>" class="btn btn-info">Call</a>
+                        <a href="#" data-id="<?php echo $row['id'];?>" class="btn btn-danger dlt-btn">Delete</a>
+                     
                     </td>
                 </tr>
                 <?php } }else{echo "No Interest Available";}?>
@@ -50,5 +52,13 @@
         </div>
        </div>
     </div>
+
+    <!-- ================================================================= -->
+    <form action="../model/dltInterestModel.php" method="post" id="dltForm">
+        <input type="hidden" name="id" id="hid">
+    </form>
+<!-- ===================================================================== -->
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/myscripts.js"></script>
 </body>
 </html>
