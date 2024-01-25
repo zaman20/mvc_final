@@ -19,17 +19,22 @@
             </div>
         </div>
         <div class="col-lg-1"></div>
+        <?php include('../model/editRentModel.php');?>
         <div class="col-lg-9 right-part">
-                <h2>Add New Rent</h2>
-                <form action="../controller/create-rent.php" method="post" class="rent-form row">
+                <h2>Update Rent</h2>
+                <form action="../controller/update-rent.php" method="post" class="rent-form row">
                     <div class="col-lg-6">
-                        <input type="text" name="buyer_name" placeholder="Buyer Name" class="form-control my-2">
+                        <label for="">Name</label>
+                        <input type="text" value="<?php echo $bname;?>" name="buyer_name" placeholder="Buyer Name" class="form-control my-2">
                     </div>
                     <div class="col-lg-6">
-                        <input type="number" name="buyer_phone" placeholder="Buyer Phone" class="form-control my-2">
+                        <label for="">Phone</label>
+                        <input type="number" value="<?php echo $bphone;?>" name="buyer_phone" placeholder="Buyer Phone" class="form-control my-2">
                     </div>
                     <div class="col-lg-6">
+                        <label for="">House No</label>
                         <select name="house" id="" class="form-select">
+                            <option value="<?php echo $house;?>">House#<?php echo $house;?></option>
                             <?php include('../Model/houseModel.php');?>
                             <?php while($row= mysqli_fetch_assoc($query)){ ?>
                                 <option value="<?php echo $row['id'];?>">House #<?php echo $row['id'];?></option>
@@ -37,10 +42,14 @@
                         </select>
                     </div>
                     <div class="col-lg-6">
-                        <input type="text" name="monthly_cost" placeholder="Monthly Cost" class="form-control my-2">
+                        <label for="">Monthly Cost</label>
+                        <input type="text" value="<?php echo $cost?>" name="monthly_cost" placeholder="Monthly Cost" class="form-control my-2">
                     </div>
                     <div class="col-lg-12">
-                        <input type="submit" value="Rent" class="form-control my-2 btn btn-primary">
+                        <input type="hidden" name="id" value="<?php echo $id;?>">
+                        <label for="">Paid:</label>
+                        <input type="text" value="<?php echo $paid?>" name="paid" placeholder="Paid Amount" class="form-control my-2">
+                        <input type="submit" value="Update" class="form-control my-2 btn btn-primary">
                     </div>
                    
                 </form>

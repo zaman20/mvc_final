@@ -29,7 +29,7 @@
                     </div>
                 
                     <div class="col-lg-6">
-                        <input type="number" name="price" placeholder="form-control my-2">
+                        <input type="number" name="price" class="form-control my-2" placeholder="Asking Price">
                     </div>
                     <div class="col-lg-12">
                         <textarea name="details" class="form-control my-2" cols="30" rows="10">Details....</textarea>

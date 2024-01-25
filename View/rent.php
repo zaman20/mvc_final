@@ -29,23 +29,29 @@
                     <th>Name</th>
                     <th>Phone</th>
                     <th>House #</th>
+                    <th>Price</th>
                     <th>Monthly Rate</th>
                     <th>Total Paid</th>
                     <th>Due</th>
-                    <th>Last Payment</th>
+                    <th></th>
                 </tr>
-                <?php while($row= mysqli_fetch_assoc($query)){ $count++;?>
+                <?php $total =0;
+                while($row= mysqli_fetch_assoc($query)){ 
+                    $total = $total + $row['monthly_cost'];
+                    $count++;?>
                     <tr>
                         <td><?php echo $count;?></td>
                         <td><?php echo $row['buyer_name'];?></td>
                         <td><?php echo $row['buyer_phone'];?></td>
                         <td><?php echo $row['house'];?></td>
+                        <td><?php echo $row['price'];?></td>
                         <td><?php echo $row['monthly_cost'];?></td>
-                        <td>10000</td>
-                        <td>300000</td>
+                        <td><?php echo $row['paid'];?></td>
+                        <td><?php echo $row['price'] - $row['paid'];?></td>
                         <td>
                             <a href="tel:<?php echo $row['buyer_phone'];?>" class="btn btn-warning">Call</a>
-                            <a href="#" class="btn btn-info">Update</a>
+                            <a href="edit-rent.php?id=<?php echo $row['id'];?>"  class="btn btn-info">Update</a>
+                            <a href="#" data-id="<?php echo $row['id'];?>" class="btn btn-danger dlt-btn">Delete</a>
                         </td>
                     </tr>
                 
@@ -55,5 +61,13 @@
         </div>
        </div>
     </div>
+
+    <!-- ================================================================= -->
+    <form action="../model/dltRentModel.php" method="post" id="dltForm">
+        <input type="hidden" name="id" id="hid">
+    </form>
+<!-- ===================================================================== -->
+<script src="../assets/js/jquery.js"></script>
+<script src="../assets/js/myscripts.js"></script>
 </body>
 </html>

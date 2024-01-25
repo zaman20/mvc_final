@@ -30,6 +30,7 @@
                     <th>House #</th>
                     <th>Mobile </th>
                     <th>Address</th>
+                    <th>Bid Price</th>
                     <th>Date</th>
                     <th>Action</th>
                 </tr>
@@ -40,6 +41,7 @@
                     <td>House#<?php echo $row['house'];?></td>
                     <td><?php echo $row['phone'];?></td>
                     <td><?php echo $row['address'];?></td>
+                    <td><?php echo $row['price'];?></td>
                     <td><?php echo $row['date'];?></td>
                     <td>
                         <a href="tel:<?php echo $row['phone'];?>" class="btn btn-info">Call</a>

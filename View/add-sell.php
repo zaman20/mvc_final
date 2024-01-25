@@ -32,7 +32,7 @@
                         <select name="house" id="" class="form-select">
                         <?php include('../Model/houseModel.php');?>
                         <?php while($row= mysqli_fetch_assoc($query)){ ?>
-                            <option value="House #<?php echo $row['id'];?>">House #<?php echo $row['id'];?></option>
+                            <option value="<?php echo $row['id'];?>">House #<?php echo $row['id'];?> Price-<?php echo $row['price']?></option>
                         <?php }?>
                         </select>
                     </div>
