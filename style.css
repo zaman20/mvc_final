@@ -113,3 +113,7 @@
     visibility: visible;
     opacity: 1;
 }
+a.btn.btn-secondary.add-btn {
+    font-size: 15px;
+    width: 94px;
+}

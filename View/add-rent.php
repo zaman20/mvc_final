@@ -31,7 +31,7 @@
                     <div class="col-lg-6">
                         <select name="house" id="" class="form-select">
                             <?php include('../Model/houseModel.php');?>
-                            <?php while($row= mysqli_fetch_assoc($query)){ ?>
+                            <?php while($row= mysqli_fetch_assoc($query2)){ ?>
                                 <option value="<?php echo $row['id'];?>">House #<?php echo $row['id'];?></option>
                             <?php }?>
                         </select>

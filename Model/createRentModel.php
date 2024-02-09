@@ -8,6 +8,6 @@
        $montly_cost = $_POST['monthly_cost'];
 
        $sql = "INSERT INTO `rent`(`buyer_name`, `buyer_phone`, `house`, `monthly_cost`) VALUES ('$buyer_name','$buyer_phone','$house','$montly_cost')";
-
+       $sql2 = "UPDATE `house` SET `status` = 1 WHERE `id` = '$house'";
        }
 ?>

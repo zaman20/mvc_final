@@ -31,6 +31,13 @@
                     <div class="col-lg-6">
                         <input type="number" name="price" class="form-control my-2" placeholder="Asking Price">
                     </div>
+                    <div class="col-lg-6">
+                        <select name="type" id="" class="form-select">
+                            <option selected disabled>Select Option</option>
+                            <option value="Sell">For Sell</option>
+                            <option value="Rent">For Rent</option>
+                        </select>
+                    </div>
                     <div class="col-lg-12">
                         <textarea name="details" class="form-control my-2" cols="30" rows="10">Details....</textarea>
                         <input type="submit" value="Add" class="form-control my-2 btn btn-primary">

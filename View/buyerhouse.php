@@ -30,7 +30,9 @@
                     <th>House #</th>
                     <th>Location</th>
                     <th>Asking Price TK</th>
+                    <th>For...</th>
                     <th>Details</th>
+                    <th>Status</th>
                     <th> </th>
                     
                 </tr>
@@ -41,10 +43,28 @@
                         <td>House#<?php echo $row['id'];?></td>
                         <td><?php echo $row['location'];?></td>
                         <td><?php echo $row['price'];?></td>
+                        <td><?php echo $row['type'];?></td>
                         <td><?php echo $row['details'];?></td>
-                        <td>
-                            <a href="#" data-id="<?php echo $row['id'];?>" class="btn btn-warning add-btn">Book Now</a>
-                        </td>
+                        
+                        <?php if($row['status']==0){?>
+                            <td>
+                                <span class='btn btn-success'>Available</span>
+                            </td>
+                            <td>
+                                <a href="#" data-id="<?php echo $row['id'];?>" class="btn btn-secondary add-btn">Book Now</a>
+                            </td>
+                        <?php }else if($row['status']==1){?>
+                            <td>
+                                <span class='btn btn-info'>Booked</span>
+                            </td>
+                            <td> </td>
+                        <?php }else if($row['status']==2){?>
+                            <td>
+                                <span class='btn btn-warning'>Sold</span>
+                            </td>
+                            <td> </td>
+                        <?php }?>
+                        
                     </tr>
                 
 

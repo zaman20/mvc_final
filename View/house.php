@@ -34,7 +34,9 @@
                     <th>House #</th>
                     <th>Location</th>
                     <th>Price</th>
+                    <th>For</th>
                     <th>Details</th>
+                    <th>Status</th>
                     <th> </th>
                     
                 </tr>
@@ -45,7 +47,17 @@
                         <td>House#<?php echo $row['id'];?></td>
                         <td><?php echo $row['location'];?></td>
                         <td><?php echo $row['price'];?></td>
+                        <td><?php echo $row['type'];?></td>
                         <td><?php echo $row['details'];?></td>
+                        <td>
+                            <?php if($row['status']==0){?>
+                                <span class='btn btn-success'>Available</span>
+                            <?php }else if($row['status']==1){?>
+                                <span class='btn btn-info'>Booked</span>
+                            <?php }else if($row['status']==2){?>
+                                <span class='btn btn-warning'>Sold</span>
+                            <?php }?>
+                        </td>
                         <td>
                             <a href="#" data-id="<?php echo $row['id'];?>" class="btn btn-danger dlt-btn">Delete</a>
                         </td>
