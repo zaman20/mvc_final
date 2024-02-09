@@ -19,7 +19,7 @@
         </div>
         <div class="col-lg-1"></div>
         <div class="col-lg-9 right-part">
-            <a href="add-sell.php" class="btn btn-dark">New Sell</a>
+            <a href="add-sell.php" class="btn btn-primary">New Sell</a>
                 <?php if(isset($_GET['msg'])){?>
                     <p class="alert alert-success mt-5"><?php echo $_GET['msg'];?> <i class="fa-solid fa-xmark close-icon" style='cursor:pointer; float:right;font-size:20px;'></i></p>
                     

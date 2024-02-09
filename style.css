@@ -48,7 +48,7 @@
     
 }
 .left-part{
-    background: black;
+    background: #790da3;
     height: 100%;
     position: fixed;
     color: white;
@@ -76,8 +76,8 @@
     margin-top: 48px;
 }
 .box{
-    width: 279px;
-    height: 142px;
+    width: 270px;
+    height: 170px;
     padding: 30px;
     margin: 1%;
     float: left;
@@ -85,15 +85,20 @@
     font-size: 31px;
     color: white;
     text-transform: uppercase;
+    border: 2px solid red;
+    border-radius: 50%;
 }
 .rent{
-    background: linear-gradient(#3bff00, red);
+    background:radial-gradient(#958ef7, black);
 }
 .sell{
-    background:linear-gradient(rgb(242, 255, 0),#c7140f)
+    background:radial-gradient(rgb(229 238 42),#161515);
 }
 .appnt{
-    background: linear-gradient(#011c21,rgb(255, 0, 0))
+    background: radial-gradient(#011c21,rgb(255, 0, 0))
+}
+.house{
+    background: radial-gradient(#011c21,rgb(4, 196, 77))
 }
 .booking-box {
     width: 347px;

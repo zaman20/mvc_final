@@ -21,10 +21,13 @@
         <div class="col-lg-1"></div>
         <div class="col-lg-9 right-part">
             <?php include('../Model/dashboardModel.php');?>
-            <div class="box rent">Rent <br> 
+            <div class="box house">House <br>
+                <?php echo $house?>
+            </div>
+            <div class="box rent">Rented <br> 
                 <?php echo $rent?>
             </div>
-            <div class="box sell">Sell <br>
+            <div class="box sell">Sold <br>
                 <?php echo $sell?>
             </div>
             <div class="box appnt">Appointment <br>

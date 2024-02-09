@@ -23,7 +23,7 @@
                     <p class="alert alert-success mt-5"><?php echo $_GET['msg'];?> <i class="fa-solid fa-xmark close-icon" style='cursor:pointer; float:right;font-size:20px;'></i></p>
                     
                 <?php }?>
-            <a href="add-house.php" class="btn btn-dark">Add New </a>
+            <a href="add-house.php" class="btn btn-primary">Add New </a>
             <table class="table table-striped mt-3">
             <?php include('../Model/houseModel.php');
                 if($result>0){

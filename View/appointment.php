@@ -20,7 +20,7 @@
         </div>
         <div class="col-lg-1"></div>
         <div class="col-lg-9 right-part">
-            <a href="add-appointment.php" class="btn btn-dark">New Appointment</a>
+            <a href="add-appointment.php" class="btn btn-primary">New Appointment</a>
             
             <table class="table table-striped mt-3">
                 <?php include('../Model/appointmentModel.php');            

@@ -19,7 +19,7 @@
         </div>
         <div class="col-lg-1"></div>
         <div class="col-lg-9 right-part">
-            <a href="add-rent.php" class="btn btn-dark">New Rent</a>
+            <a href="add-rent.php" class="btn btn-primary">New Rent</a>
             <table class="table table-striped mt-3">
             <?php include('../Model/rentModel.php');
                 if($result>0){
